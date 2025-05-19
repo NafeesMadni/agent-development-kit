@@ -45,7 +45,7 @@ parent_folder/
    ```
 
 4. **Command Location**
-   - Always run `adk web` from the parent directory (`6-multi-agent`), not from inside any agent directory
+   - Always run `adk web` from the parent directory (`7-multi-agent`), not from inside any agent directory
 
 This structure ensures that ADK can discover and correctly load all agents in the hierarchy.
 
@@ -193,7 +193,7 @@ source ../.venv/bin/activate
 
 To run the multi-agent example:
 
-1. Navigate to the 6-multi-agent directory containing your agent folders.
+1. Navigate to the 7-multi-agent directory containing your agent folders.
 
 2. Start the interactive web UI:
 ```bash
@@ -209,7 +209,7 @@ adk web
 ### Troubleshooting
 
 If your multi-agent setup doesn't appear properly in the dropdown menu:
-- Make sure you're running `adk web` from the parent directory (6-multi-agent)
+- Make sure you're running `adk web` from the parent directory (7-multi-agent)
 - Verify that each agent's `__init__.py` properly imports its respective `agent.py`
 - Check that the root agent properly imports all sub-agents
 
