@@ -150,5 +150,5 @@ ADK offers different types of workflow agents for different needs:
 
 ## Additional Resources
 
-- [ADK Parallel Agents Documentation](https://google.github.io/adk-docs/agents/workflow-agents/parallel-agents/)
+- [Parallel Agents Docs](https://google.github.io/adk-docs/agents/workflow-agents/parallel-agents/)
 - [Full Example: Parallel Web Research](https://google.github.io/adk-docs/agents/workflow-agents/parallel-agents/#full-example-parallel-web-research) 

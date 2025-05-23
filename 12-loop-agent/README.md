@@ -85,7 +85,7 @@ The system will:
 ## Example Input
 
 ```
-Generate a LinkedIn post about what I've learned from @aiwithbrandon's Agent Development Kit tutorial.
+c
 ```
 
 ## Loop Termination
@@ -93,3 +93,5 @@ Generate a LinkedIn post about what I've learned from @aiwithbrandon's Agent Dev
 The loop terminates in one of two ways:
 1. When the post meets all quality requirements (reviewer calls the exit_loop tool)
 2. After reaching the maximum number of iterations (10)
+
+(Loop Agents Docs)[https://google.github.io/adk-docs/agents/workflow-agents/loop-agents/#loop-agents]

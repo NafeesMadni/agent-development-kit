@@ -1,11 +1,16 @@
 import os
 import random
 
+from dotenv import load_dotenv
 from google.adk.agents import Agent
 from google.adk.models.lite_llm import LiteLlm
 
+load_dotenv()
+
 # https://docs.litellm.ai/docs/providers/openrouter
+# ! litellm is the free library that handles all the complexities of interacting with different models like openai, claude etc
 model = LiteLlm(
+    # "provider/model_family/"
     model="openrouter/openai/gpt-4.1",
     api_key=os.getenv("OPENROUTER_API_KEY"),
 )
@@ -26,8 +31,8 @@ root_agent = Agent(
     model=model,
     description="Dad joke agent",
     instruction="""
-    You are a helpful assistant that can tell dad jokes. 
-    Only use the tool `get_dad_joke` to tell jokes.
+        You are a helpful assistant that can tell dad jokes. 
+        Only use the tool `get_dad_joke` to tell jokes.
     """,
     tools=[get_dad_joke],
 )

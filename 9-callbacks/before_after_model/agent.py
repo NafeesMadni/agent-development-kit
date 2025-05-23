@@ -1,7 +1,7 @@
 """
 Before and After Model Callbacks Example
 
-This example demonstrates using model callbacks 
+This example demonstrates using model callbacks
 to filter content and log model interactions.
 """
 
@@ -15,6 +15,7 @@ from google.adk.models import LlmRequest, LlmResponse
 from google.genai import types
 
 
+# LlmRequest contains the msg which we trying to send to LLMs like gemini, claude
 def before_model_callback(
     callback_context: CallbackContext, llm_request: LlmRequest
 ) -> Optional[LlmResponse]:
@@ -95,6 +96,7 @@ def after_model_callback(
     Returns:
         Optional LlmResponse to override model response
     """
+
     # Log completion
     print("[AFTER MODEL] Processing response")
 

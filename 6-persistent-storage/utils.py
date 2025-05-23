@@ -103,7 +103,7 @@ async def process_agent_response(event):
             )
             print(f"{Colors.CYAN}{Colors.BOLD}{final_response}{Colors.RESET}")
             print(
-                f"{Colors.BG_BLUE}{Colors.WHITE}{Colors.BOLD}╚═════════════════════════════════════════════════════════════{Colors.RESET}\n"
+                f"{Colors.BG_BLUE}{Colors.WHITE}{Colors.BOLD}╚════════════════════════════════════════════════════════════{Colors.RESET}\n"
             )
         else:
             print(
@@ -115,7 +115,9 @@ async def process_agent_response(event):
 
 async def call_agent_async(runner, user_id, session_id, query):
     """Call the agent asynchronously with the user's query."""
+
     content = types.Content(role="user", parts=[types.Part(text=query)])
+
     print(
         f"\n{Colors.BG_GREEN}{Colors.BLACK}{Colors.BOLD}--- Running Query: {query} ---{Colors.RESET}"
     )

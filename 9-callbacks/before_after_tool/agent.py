@@ -61,7 +61,7 @@ def before_tool_callback(
         print("[Callback] Converting 'Merica to 'United States'")
         args["country"] = "United States"
         print(f"[Callback] Modified args: {args}")
-        return None
+        return None  # Meaning proceed as normal
 
     # Skip the call completely for restricted countries
     if (
@@ -69,6 +69,8 @@ def before_tool_callback(
         and args.get("country", "").lower() == "restricted"
     ):
         print("[Callback] Blocking restricted country")
+
+        # cancelling the tool call
         return {"result": "Access to this information has been restricted."}
 
     print("[Callback] Proceeding with normal tool call")
@@ -114,17 +116,17 @@ root_agent = LlmAgent(
     model="gemini-2.0-flash",
     description="An agent that demonstrates tool callbacks by looking up capital cities",
     instruction="""
-    You are a helpful geography assistant.
-    
-    Your job is to:
-    - Find capital cities when asked using the get_capital_city tool
-    - Use the exact country name provided by the user
-    - ALWAYS return the EXACT result from the tool, without changing it
-    - When reporting a capital, display it EXACTLY as returned by the tool
-    
-    Examples:
-    - "What is the capital of France?" → Use get_capital_city with country="France"
-    - "Tell me the capital city of Japan" → Use get_capital_city with country="Japan"
+        You are a helpful geography assistant.
+        
+        Your job is to:
+            - Find capital cities when asked using the get_capital_city tool
+            - Use the exact country name provided by the user
+            - ALWAYS return the EXACT result from the tool, without changing it
+            - When reporting a capital, display it EXACTLY as returned by the tool
+            
+        Examples:
+            - "What is the capital of France?" → Use get_capital_city with country="France"
+            - "Tell me the capital city of Japan" → Use get_capital_city with country="Japan"
     """,
     tools=[get_capital_city],
     before_tool_callback=before_tool_callback,

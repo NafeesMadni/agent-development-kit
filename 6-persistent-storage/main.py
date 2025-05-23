@@ -65,7 +65,7 @@ async def main_async():
     while True:
         # Get user input
         user_input = input("You: ")
-
+ 
         # Check if user wants to exit
         if user_input.lower() in ["exit", "quit"]:
             print("Ending conversation. Your data has been saved to the database.")

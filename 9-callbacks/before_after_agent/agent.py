@@ -1,7 +1,7 @@
 """
 Before and After Agent Callbacks Example
 
-This example demonstrates how to use both before_agent_callback and after_agent_callback 
+This example demonstrates how to use both before_agent_callback and after_agent_callback
 for logging purposes.
 """
 
@@ -13,6 +13,8 @@ from google.adk.agents.callback_context import CallbackContext
 from google.genai import types
 
 
+# CallbackContext allows the agent to access the state & all the other necessary information.
+# Also make sure return type optional and returning Content. Why? if you want the agent to continue as normal then return None. if user did something that we didn't like we would return a message saying something...
 def before_agent_callback(callback_context: CallbackContext) -> Optional[types.Content]:
     """
     Simple callback that logs when the agent starts processing a request.
@@ -23,12 +25,14 @@ def before_agent_callback(callback_context: CallbackContext) -> Optional[types.C
     Returns:
         None to continue with normal agent processing
     """
+
+    # return types.Content( role="model", parts=[types.Part(text="hye, what are you trying to do?")])
+
     # Get the session state
     state = callback_context.state
 
     # Record timestamp
     timestamp = datetime.now()
-
     # Set agent name if not present
     if "agent_name" not in state:
         state["agent_name"] = "SimpleChatBot"
@@ -63,6 +67,7 @@ def after_agent_callback(callback_context: CallbackContext) -> Optional[types.Co
     Returns:
         None to continue with normal agent processing
     """
+
     # Get the session state
     state = callback_context.state
 

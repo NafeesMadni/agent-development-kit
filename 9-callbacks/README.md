@@ -14,6 +14,8 @@ Callbacks are functions that execute at specific points in an agent's execution 
 
 ADK provides several types of callbacks that can be attached to different components of your agent system.
 
+https://google.github.io/adk-docs/callbacks/types-of-callbacks/#types-of-callbacks
+
 ## Callback Parameters and Context
 
 Each type of callback provides access to specific context objects that contain valuable information about the current execution state. Understanding these parameters is key to building effective callbacks.
@@ -327,6 +329,6 @@ Then select the agent you want to test from the dropdown menu in the web UI:
 
 ## Additional Resources
 
-- [ADK Callbacks Documentation](https://google.github.io/adk-docs/callbacks/)
-- [Types of Callbacks](https://google.github.io/adk-docs/callbacks/types-of-callbacks/)
+- [ADK Callbacks Docs](https://google.github.io/adk-docs/callbacks/)
+- [Types of Callbacks Docs](https://google.github.io/adk-docs/callbacks/types-of-callbacks/)
 - [Design Patterns and Best Practices](https://google.github.io/adk-docs/callbacks/design-patterns-and-best-practices/)

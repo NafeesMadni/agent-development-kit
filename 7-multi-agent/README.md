@@ -209,7 +209,7 @@ adk web
 ### Troubleshooting
 
 If your multi-agent setup doesn't appear properly in the dropdown menu:
-- Make sure you're running `adk web` from the parent directory (6-multi-agent)
+- Make sure you're running `adk web` from the parent directory (7-multi-agent)
 - Verify that each agent's `__init__.py` properly imports its respective `agent.py`
 - Check that the root agent properly imports all sub-agents
 

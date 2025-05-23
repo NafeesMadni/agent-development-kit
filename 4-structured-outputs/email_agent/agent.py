@@ -12,6 +12,8 @@ class EmailContent(BaseModel):
     )
 
 
+# https://google.github.io/adk-docs/agents/llm-agents/#structuring-data-input_schema-output_schema-output_key
+
 # --- Create Email Generator Agent ---
 root_agent = LlmAgent(
     name="email_agent",

@@ -13,6 +13,10 @@ from .subagents.scorer import lead_scorer_agent
 # Import the subagents
 from .subagents.validator import lead_validator_agent
 
+# ~ These are workflows sequential, parallel, and loop agent
+# ? Workflows agents are those agents who work in particular pattern.
+# ! Important concept about Share State between agents, must watch video from 2:40:31
+
 # Create the sequential agent with minimal callback
 root_agent = SequentialAgent(
     name="LeadQualificationPipeline",
